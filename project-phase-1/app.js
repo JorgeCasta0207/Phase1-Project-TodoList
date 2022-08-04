@@ -26,7 +26,8 @@ const getData = () => [
     { imgSrc: "https://townsquare.media/site/812/files/2017/11/Kanye-West-MBDTF.jpg?w=1080&q=75", name: "Kanye West"},
     { imgSrc: "https://upload.wikimedia.org/wikipedia/en/2/27/Daft_Punk_-_Discovery.png", name: "Daft Punk"},
     { imgSrc: "https://upload.wikimedia.org/wikipedia/en/b/b7/NirvanaNevermindalbumcover.jpg", name: "Nirvana"},
-
+    { imgSrc: "https://www.revolvermag.com/sites/default/files/styles/original_image__844px_x_473px_/public/media/section-media/master_cover.jpg?itok=L1JgJGah&timestamp=1508341064", name: "Metallica"},
+    { imgSrc: "https://upload.wikimedia.org/wikipedia/en/8/84/MarvinGayeWhat%27sGoingOnalbumcover.jpg", name: "Marvin Gaye"},
 ];
 
 
@@ -56,6 +57,10 @@ face.src = item.imgSrc;
 section.appendChild(card);
 card.appendChild(face);
 card.appendChild(back);
+
+card.addEventListener('click', (e) => {
+    card.classList.toggle("toggleCard");
+});
 });
 };
 
